@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="450.0" stylesheets="@../resource/TonnysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.luismonterroso.controller.MenuPrincipalController">
+   <children>
+      <Pane layoutX="-27.0" prefHeight="450.0" prefWidth="480.0" style="-fx-background-color: #FFEFAD;">
+         <children>
+            <ImageView fitHeight="455.0" fitWidth="455.0" layoutX="26.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/fondoDiseño.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="270.0" fitWidth="296.0" layoutX="119.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icono1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <MenuBar layoutX="-12.0" layoutY="-1.0" prefHeight="44.0" prefWidth="269.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaEmpresa" text="Empresa" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="Producto" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="Tipo Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoPlato" text="Tipo Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaPresupuesto" text="Presupuesto" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Productos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text=" ?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

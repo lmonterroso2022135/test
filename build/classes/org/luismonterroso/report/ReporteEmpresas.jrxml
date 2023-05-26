@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresas" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3ab238f9-0fce-48dd-a0ad-a59a7eee5b67">
+	<property name="ireport.zoom" value="0.9090909090909105"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="155"/>
+	<queryString>
+		<![CDATA[call sp_ListarEmpresas();]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="262" width="350" height="300" uuid="c2a8a6de-5238-4651-ac6a-99f3a70b49fb"/>
+				<imageExpression><![CDATA["C:\\Users\\Informatica\\Documents\\NetBeansProjects\\TonnysKinal2022135\\src\\org\\luismonterroso\\image\\fondor1 (1).png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="456" y="11" width="296" height="300" uuid="54400746-1c46-4243-b615-a2d2c6f952ba"/>
+				<imageExpression><![CDATA["C:\\Users\\Informatica\\Documents\\NetBeansProjects\\TonnysKinal2022135\\src\\org\\luismonterroso\\image\\fondor2.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="13" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement x="216" y="43" width="351" height="43" uuid="8c54217f-1389-495d-9446-5fc0ac23045d"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="32" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de empresas]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="127" height="131" uuid="a3d79741-f3d1-4ac0-b138-dab53bd948a7"/>
+				<imageExpression><![CDATA["C:\\Users\\Informatica\\Documents\\NetBeansProjects\\TonnysKinal2022135\\src\\org\\luismonterroso\\image\\icono2.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="22" width="163" height="20" uuid="47599ce3-5cc3-4d4f-b722-f7a06ac6ddf5"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="16"/>
+				</textElement>
+				<text><![CDATA[Codigo de Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="22" width="172" height="20" uuid="ed6af4ac-6f0c-4bed-b3c1-548e6a803893"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre De Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="22" width="100" height="20" uuid="6dc52dcc-dac3-4a80-872f-2447f2fe834d"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="16"/>
+				</textElement>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="22" width="100" height="20" uuid="cbfa960f-e91c-42ad-a508-e50d8bb7e751"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="16"/>
+				</textElement>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="91" y="9" width="100" height="20" uuid="567d3161-7a9d-429d-8b8a-d69a5abff487"/>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="8" width="100" height="20" uuid="546b5b84-d9aa-4a1b-ad24-477989b5469c"/>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="9" width="100" height="20" uuid="2889fb60-9fd0-44c2-96c4-0dab0709282f"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="8" width="100" height="20" uuid="7a44aaf3-a24c-48ec-984a-edc7099dbefd"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="12" y="28" width="724" height="1" uuid="8462fe60-d867-4304-a296-220d9eb50495"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="660" y="59" width="94" height="20" uuid="b70e9b94-f6fa-4508-87f1-fe173ecc2047"/>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[Tonny's Kinal®]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

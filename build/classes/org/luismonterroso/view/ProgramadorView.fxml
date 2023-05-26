@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.luismonterroso.controller.ProgramadorController">
+   <children>
+      <Pane layoutX="-8.0" prefHeight="370.0" prefWidth="600.0">
+         <children>
+            <Pane layoutY="-7.0" prefHeight="366.0" prefWidth="277.0" style="-fx-background-color: #577EF2;">
+               <children>
+                  <Circle fill="#2350d9" layoutX="230.0" layoutY="51.0" radius="152.0" stroke="#2350d9" strokeType="INSIDE" />
+                  <Circle fill="#2350d9" layoutX="96.0" layoutY="360.0" radius="147.0" stroke="#2350d9" strokeType="INSIDE" />
+                  <Pane layoutX="51.0" layoutY="104.0" prefHeight="218.0" prefWidth="174.0" style="-fx-background-color: #261E0F;">
+                     <children>
+                        <ImageView fx:id="imgProgramador" fitHeight="138.0" fitWidth="128.0" layoutX="35.0" layoutY="23.0" onMouseClicked="#cambiarImagen" onMouseEntered="#cambiarImagen" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/donProgramador.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="24.0" layoutY="171.0" text="Programador " textFill="#f28705">
+                           <font>
+                              <Font name="Arial Black" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="277.0" prefHeight="359.0" prefWidth="322.0" style="-fx-background-color: #B6C5F2;">
+               <children>
+                  <Pane layoutX="-277.0" layoutY="-4.0" prefHeight="51.0" prefWidth="615.0" style="-fx-background-color: #261E0F;">
+                     <children>
+                        <Label layoutX="65.0" layoutY="13.0" prefHeight="26.0" prefWidth="492.0" text="Programador principal de la interfaz grafica de la empresa Tonny's Kinal" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="331.0" fitWidth="334.0" layoutX="-3.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../image/fondo22.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="29.0" layoutY="83.0" prefHeight="226.0" prefWidth="265.0" style="-fx-background-color: #667CE0;">
+                     <children>
+                        <ImageView fitHeight="85.0" fitWidth="115.0" layoutX="194.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icono2.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="13.0" layoutY="49.0" text="Luis Mario Monterroso Juarez" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="80.0" text="2022135" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="113.0" text="IN5BV" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="17.0" layoutY="144.0" prefHeight="26.0" prefWidth="212.0" text="Estudiante de Fundacion Kinal " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button layoutX="-1.0" layoutY="47.0" mnemonicParsing="false" onAction="#menuPrincipal" prefHeight="36.0" prefWidth="42.0" style="-fx-background-color: #d93030;">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                           <image>
+                              <Image url="@../image/flecha.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

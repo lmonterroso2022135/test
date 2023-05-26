@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.luismonterroso.controller.PresupuestoController">
+   <children>
+      <Pane prefHeight="519.0" prefWidth="809.0" style="-fx-background-color: #ECCB6C;">
+         <children>
+            <ImageView fitHeight="455.0" fitWidth="456.0" layoutX="64.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" rotate="-13.6">
+               <image>
+                  <Image url="@../image/fondo1.png" />
+               </image>
+               <rotationAxis>
+                  <Point3D z="-2.0" />
+               </rotationAxis>
+            </ImageView>
+            <ImageView fitHeight="522.0" fitWidth="403.0" layoutX="531.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/fondo6.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="230.0" layoutY="204.0" prefHeight="287.0" prefWidth="548.0" style="-fx-background-radius: 30 30 30 30; -fx-background-color: #F5D481; -fx-opacity: -1 2;">
+               <children>
+                  <TableView fx:id="tblPresupuestos" layoutX="15.0" layoutY="12.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="263.0" prefWidth="514.0">
+                    <columns>
+                      <TableColumn fx:id="colCodigoPresupuesto" prefWidth="125.33331298828125" text="Cod. Presupuesto" />
+                      <TableColumn fx:id="colFechaSolicitud" prefWidth="134.3333740234375" text="Fecha Solicitud" />
+                        <TableColumn fx:id="colCantidadPresupuesto" prefWidth="140.66668701171875" text="Cnatidad Presupuesto" />
+                        <TableColumn fx:id="colCodigoEmpresa" prefWidth="110.99993896484375" text="CodigoEmpresa" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane layoutX="230.0" layoutY="21.0" prefHeight="173.0" prefWidth="548.0" style="-fx-background-radius: 30 30 30 30; -fx-background-color: #F5D481; -fx-opacity: -1 2;">
+               <children>
+                  <GridPane fx:id="grpFecha" layoutX="21.0" layoutY="43.0" prefHeight="102.0" prefWidth="514.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="141.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="119.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="137.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="117.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="152.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="132.0" minHeight="0.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtCantidadPresupuesto" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtCodigoPresupuesto" editable="false" prefHeight="27.0" prefWidth="123.0" GridPane.columnIndex="1" />
+                        <Label text="Codigo Presupuesto">
+                           <font>
+                              <Font name="Britannic Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="71.0" text="Cantidad " GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Britannic Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Fecha Solicitud" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Britannic Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Codigo Empresa" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Britannic Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cmbCodigoEmpresa" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Button layoutX="31.0" layoutY="-23.0" mnemonicParsing="false" onAction="#ventanaEmpresa" prefHeight="37.0" prefWidth="42.0" style="-fx-background-color: #d93030;">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/empresa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Button layoutX="216.0" layoutY="-3.0" mnemonicParsing="false" onAction="#menuPrincipal" prefHeight="37.0" prefWidth="42.0" style="-fx-background-color: #d93030;">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="24.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../image/flecha.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="528.0" prefWidth="200.0" style="-fx-background-color: #8C533E;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d93030" height="233.0" layoutX="11.0" layoutY="-3.0" stroke="#d93030" strokeType="INSIDE" width="194.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8c533e" height="91.0" layoutX="89.0" layoutY="204.0" rotate="20.0" stroke="#8c533e" strokeType="INSIDE" width="105.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8c533e" height="91.0" layoutX="22.0" layoutY="203.0" rotate="340.0" stroke="#8c533e" strokeType="INSIDE" width="105.0" />
+            <ImageView fitHeight="102.0" fitWidth="110.0" layoutX="57.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/presupuesto.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="-1.0" layoutY="248.0" prefHeight="280.0" prefWidth="217.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#nuevo" prefHeight="59.0" prefWidth="225.0" styleClass="button1" stylesheets="@../resource/TonnysKinal.css" text="    Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Britannic Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#eliminar" prefHeight="59.0" prefWidth="214.0" styleClass="button1" stylesheets="@../resource/TonnysKinal.css" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#editar" prefHeight="59.0" prefWidth="214.0" styleClass="button1" stylesheets="@../resource/TonnysKinal.css" text="    Editar">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#reporte" prefHeight="59.0" prefWidth="214.0" styleClass="button1" stylesheets="@../resource/TonnysKinal.css" text="Reporte">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/report.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Bell MT" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Label layoutX="22.0" layoutY="20.0" prefHeight="31.0" prefWidth="173.0" text="Presupuesto" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="539.0" fitWidth="460.0" layoutX="680.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fondo3.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
